@@ -11,7 +11,7 @@ class SpamDetector:
     def predict(self, text:str) -> Tuple[bool, float, float]:
         start_time=time.time()
 
-        texts=[text]
+        texts = tf.constant([text])    
 
         predictions= self.model.predict(texts, verbose=0)
         probability=1/(1+np.exp(-predictions[0][0]))

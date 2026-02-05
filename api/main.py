@@ -46,7 +46,8 @@ async def predict_spam(request: MessageRequest):
         )
     
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        logging.error(f"Prediction error: {str(e)}", exc_info=True)  # Added detailed logging
+        raise HTTPException(status_code=500, detail=f"Prediction failed: {str(e)}")
     
 @app.get("/health")
 async def health_check():

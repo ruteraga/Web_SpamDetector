@@ -7,10 +7,10 @@ RUN pip install --upgrade pip
 # Force typing-extensions version first
 RUN pip install typing-extensions==4.5.0
 
-# Install TensorFlow and core deps with compatible numpy version
+# Install TensorFlow and core deps with latest Keras 3.x support
 RUN pip install --no-cache-dir \
-    tensorflow-cpu==2.15.0 \
-    numpy==1.24.3 \
+    tensorflow-cpu==2.18.0 \
+    numpy==1.26.4 \
     pandas==2.1.3
 
 # Install API deps

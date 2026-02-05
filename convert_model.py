@@ -11,7 +11,7 @@ Solutions:
 3. Reconstruct the model architecture manually
 """
 
-import tensorflow as tf
+import tensorflow-cpu as tf
 import numpy as np
 
 # Option 1: Try loading with compatibility mode

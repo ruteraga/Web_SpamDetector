@@ -1,0 +1,17 @@
+Hello Alex Chen,
+
+Your monthly statement for your account ending in 1234 is now available.
+
+Statement Period: March 1 - 31, 2023
+
+Amount Due: $148.50
+
+Due Date: April 15, 2023
+
+To view your full statement and make a payment, please log in to your secure client portal: https://client.acme-billing[.]com/login
+
+As always, you can manage your communication preferences in your account settings.
+
+Sincerely,
+The Billing Team at Acme Services
+https://www.acme-services[.]com
