@@ -17,7 +17,7 @@ try:
     spam_detector= SpamDetector("data/text_model.keras")
 except Exception as e:
     logging.error(f"Failed to load model:{e}")
-    spam_detector= None  # Fixed typo: was 'spma_detector'
+    spam_detector= None 
 
 class MessageRequest(BaseModel):
     text: str
