@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api:/app/api
+      - ./data:/app/data
+    environment:
+      - MODEL_PATH=/app/data/text_model.keras
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+
+  dashboard:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./web_dashboard:/app/web_dashboard
+      - ./data:/app/data
+      - ./api:/app/api
+    command: streamlit run web_dashboard/app.py --server.port=8501
+    depends_on:
+      - api
